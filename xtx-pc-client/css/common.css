@@ -1,0 +1,702 @@
+/* -----------------------------------头部模块 */
+/* 版心 */
+.container{
+    width: 1240px;
+    margin: 0 auto;
+}
+
+/* 颜色 */
+.color{
+    color: #9a2e1f;
+}
+
+
+/* -----------------------------------------快捷菜单 */
+.xtx-shortcut{
+    height: 52px;
+    background-color: #333333;
+}
+
+/* 每个模块的版心高度不同，所以要单独设置高度 */
+.xtx-shortcut .container{
+    height: 52px;
+    /* ps */
+    /* background-color: pink; */
+}
+
+.xtx-shortcut ul{
+    /* 垂直居中 */
+    line-height: 52px;
+}
+
+.xtx-shortcut ul li{
+    float: left;
+    color: #666666;
+}
+
+.xtx-shortcut ul a{
+    margin: 0 16px;
+    font-size: 14px;
+    color: #dcdcdc;
+}
+
+/* 最互一个li标签里面的a元素 */
+.xtx-shortcut li:last-child a{
+    margin-right: 0;
+}
+
+.xtx-shortcut li:last-child a::before{
+    content: '';
+    /* 伪元素是行内元素，无法设置宽高，又因为他和a标签水平对齐，所以设置成行内块元素，便可以设置宽高了 */
+    display: inline-block;
+    /* 给伪元素调节上下位置 */
+    margin-top: -3px;
+    margin-right: 8px;
+    width: 11px;
+    height: 16px;
+    /* ps */
+    /* background-color: skyblue; */
+    /* 在精灵图中找到合适的图，且坐标为负值 */
+    background: url('../images/sprites.png') -160px -70px;
+    /* 让伪元素垂直居中，和右边的文本水平对齐 */
+    vertical-align: middle;
+}
+/* -----------------------------------------快捷菜单 */
+
+
+/* -----------------------------------------主导航栏 */
+.xtx-main-nav{
+    padding-top: 30px;
+    /* 自动内减 */
+    box-sizing: border-box;
+    height: 130px;
+    /* ps */
+    /* background-color: pink; */
+}
+
+/* logo部分 */
+.xtx-main-nav .logo{
+    margin-left: 25px;
+    width: 207px;
+    height: 70px;
+    /* ps */
+    /* background-color: red; */
+}
+
+.xtx-main-nav .logo a{
+    display: block;
+    height: 70px;
+    background: url('../images/logo.png');
+    background-size: 100% 100%;
+    font-size: 0;
+}
+
+/* 导航栏部分 */
+.xtx-main-nav ul{
+    margin-left: 40px;
+}
+
+.xtx-main-nav ul li{
+    float: left;
+    line-height: 70px;
+    margin-right: 48px;
+}
+
+.xtx-main-nav ul a:hover{
+    color: #27ba9b;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #27ba9b;
+}
+
+/* 搜索部分 */
+.xtx-main-nav .search{
+    position: relative;
+    margin-top: 24px;
+    margin-left: 34px;
+    width: 172px;
+    height: 30px;
+}
+
+/* 搜索框上面的放大镜图标用伪元素的方法以及把伪元素定位到父元素上的办法 */
+.xtx-main-nav .search::before{
+    /* 伪元素必须要有的属性 */
+    content: '';
+    /* 子绝父相 一定要加方位 */
+    position: absolute;
+    top: 5px;
+    left: 2px;
+    width: 18px;
+    height: 18px;
+    /* ps */
+    /* background-color: red; */
+    /* 精灵图定位 */
+    background: url('../images/sprites.png') -80px -70px;
+}
+
+.xtx-main-nav .search input{
+    /* 内容和边框之间设置，以便于给精灵图留位置 */
+    padding-left: 31px;
+    width: 172px;
+    height: 30px;
+    border-bottom: 2px solid #e7e7e7;
+}
+
+/* 购物车部分 */
+.xtx-main-nav .cart{
+    position: relative;
+    width: 23px;
+    height: 23px;
+    margin-top: 28px;
+    margin-left: 15px;
+    /* ps */
+    /* background-color: red;  */
+    background: url('../images/sprites.png') -120px -70px;   
+}
+
+.xtx-main-nav .cart span{
+    /* span标签无法设置宽高，所以改成了块元素 */
+    display: block;
+    /* 子绝父相 */
+    position: absolute;
+    top: -3px;
+    left: 11px;
+    width: 20px;
+    height: 14px;
+    /* 内容垂直水平居中 */
+    line-height: 14px;
+    text-align: center;
+    /* 设置圆角边框 */
+    border-radius: 13px;
+    background-color: #e26237;
+    color: #ffffff;
+    font-size: 13px;
+}
+/* -----------------------------------------主导航栏 */
+/* ----------------------------------头部模块 */
+
+
+/* ----------------------------------内容模块 */
+/* --------------------------------------------通栏 */
+.xtx-entry{
+    position: relative;
+    height: 500px;
+    background-color: #f5f5f5;
+}
+
+/* --------------------------------------------通栏 */
+
+/* --------------------------------------------版心 */
+.xtx-entry .container{
+    position: relative;
+    height: 500px;
+    /* background-color: pink; */
+    overflow: hidden;
+}
+/* --------------------------------------------版心 */
+
+
+/* --------------------------------------------轮播图 */
+
+.xtx-entry .banner{
+    height: 500px;
+    /* background-image: url('../uploads/banner_1.png'); */
+    overflow: hidden;
+}
+
+.xtx-entry .banner ul {
+    position: absolute;
+    width: 8000px;
+}
+
+.xtx-entry .banner ul li {
+    float: left;
+}
+/* --------------------------------------------轮播图 */
+
+
+/* --------------------------------------------左边导航栏 */
+.xtx-entry .container .category{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 251px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.xtx-entry .container .category li{
+    position: relative;
+    width: 251px;
+    height: 50px;
+}
+
+.xtx-entry .container  .category li:hover{
+    background-color: #27ba9b;
+}
+
+.xtx-entry .container  .category li a{
+    text-align: center;
+    line-height: 50px;
+    color: #ffffff;
+}
+
+.xtx-entry .container .category li a::after{
+    content: '';
+    position: absolute;
+    top: 21px;
+    right: 17px;
+    width: 6px;
+    height: 11px;
+    /* background-color: pink; */
+    background: url(../images/sprites.png) -80px -110px;
+}
+
+.xtx-entry .container  .category li a span{
+    padding-left: 36px;
+    padding-right: 15px;
+    font-size: 16px;
+}
+
+/* --------------------------------------------左边导航栏 */
+
+/* --------------------------------------------左右按钮 */
+.xtx-entry .prov{
+    display: none;
+    position: absolute;
+    top: 228px;
+    left: 260px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    /* background-color: green; */
+    /* background-color: rgba(0,0,0,0.2); */
+    background:  rgba(0,0,0,0.2) url(../images/sprites.png) 14px -61px;
+    z-index: 2;
+}
+
+.xtx-entry .after{
+    display: none;
+    position: absolute;
+    top: 228px;
+    right: 10px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    /* background-color: green; */
+    /* background-color: rgba(0,0,0,0.2); */
+    background:  rgba(0,0,0,0.2) url(../images/sprites.png) -23px -61px;
+    z-index: 2;
+}
+
+/* --------------------------------------------左右按钮 */
+
+/* --------------------------------------------下方轮播指示器 */
+.xtx-entry .indicator{
+    position: absolute;
+    top: 459px;
+    left: 680px;
+    width: 110px;
+    height: 10px;
+    /* background-color: green; */
+}
+
+.xtx-entry .indicator li    {
+    /* 想让li标签在同一行，用float */
+    float: left;
+    /* display: inline; */
+    width: 10px;
+    height: 10px;
+    margin-right: 15px;
+    background-color: rgba(255, 255, 255, .43);
+    border-radius: 50%;
+}
+
+.xtx-entry .indicator li.active {
+    background-color: #fff;
+}
+
+.xtx-entry .indicator li:last-child{
+    margin-right: 0;
+}
+
+
+
+/* --------------------------------------------下方轮播指示器 */
+
+/* ----------------------------------内容模块 */
+
+/* ----------------------------------新鲜好物模块 */
+
+.xtx-new-goods{
+    height: 520px;
+    /* ps */
+    /* background-color: pink; */
+}
+
+/* ---------------------------------------------好物头部 */
+.xtx-new-goods .goods-hd{
+    height: 110px;
+    text-align: center;
+    line-height: 110px;
+    /* background-color: skyblue; */
+}
+
+.xtx-new-goods .goods-hd p {
+    height: 110px;
+}
+
+.xtx-new-goods .goods-hd p .s1{
+    padding-right: 34px;
+    color: #333;
+    font-size: 29px;
+}
+
+.xtx-new-goods .goods-hd p .s2{
+    color: #999;
+}
+
+.xtx-new-goods .goods-hd a{
+    position: relative;
+    padding-right: 20px;
+    color: #999;
+}
+
+.xtx-new-goods .goods-hd a::after{
+    content: "";
+    top: 48px;
+    right: 5px;
+    position: absolute;
+    width: 7px;
+    height: 13px;
+    background: url("../images/sprites.png") 0px -110px;
+    /* background-color: green; */
+}
+
+/* ---------------------------------------------好物头部 */
+
+
+/* ---------------------------------------------好物列表 */
+.xtx-new-goods .goods-list{
+    height: 410px;
+    /* ps */
+    /* background-color: skyblue; */
+    background-color: #f0f9f4;
+}
+
+.xtx-new-goods .goods-list li{
+    float: left;
+    margin-right: 8px;
+    width: 304px;
+    height: 410px;
+    /* ps */
+    /* background-color: yellow; */
+}
+
+.xtx-new-goods .goods-list li:last-child{
+    margin-right: 0px;
+}
+
+.xtx-new-goods .goods-list li {
+    text-align: center;
+}
+
+.xtx-new-goods .goods-list li a img{
+    /* 只设置宽百分比 可以不用设置高 也可以让图片保持宽高比 */
+    width: 100%;
+}
+
+.xtx-new-goods .goods-list li a h3{
+    margin-top: 22px;
+    height: 40px;
+    /* margin-bottom: 19px; */
+}
+
+.xtx-new-goods .goods-list li a p {
+    font-size: 23px;
+}
+
+.xtx-new-goods .goods-list li a p span{
+    font-size: 17px;
+}
+
+/* ---------------------------------------------好物列表 */
+
+
+/* ----------------------------------新鲜好物模块 */
+
+
+/* ----------------------------------底部模块 */
+
+/* ----------------------------------------------------联系方式 */
+
+/* ------------------------------------------客房服务 */
+
+.xtx-contact{
+    height: 300px;
+    text-align: center;
+}
+
+.xtx-contact ul{
+    float: left;
+}
+
+.xtx-contact ul li {
+    float: left;
+    width: 192px;
+    height: 143px;
+}
+
+.xtx-contact ul li:first-child{
+    margin: 80px 118px 80px 60px;
+}
+
+.xtx-contact ul li:first-child h3{
+    height: 50px;
+    color: #999;
+}
+
+.xtx-contact ul li:first-child a{
+    float: left;
+    margin-right: 3px;
+    width: 92px;
+    height: 92px;
+    border: solid 1px #eee;
+    /* ps */
+    /* background-color: pink; */
+}
+
+.xtx-contact ul li:first-child a:last-child{
+    margin-right: 0px;
+}
+
+.xtx-contact ul li:first-child a p{
+    margin: 22px 32px 10px 32px;
+    width: 29px;
+    height: 29px;
+    /* background-color: skyblue; */
+    background: url('../images/sprites.png') -250px -70px;    
+}
+
+.xtx-contact ul li:first-child a:last-child p{
+    background: url('../images/sprites.png') -350px -70px;    
+}
+
+.xtx-contact ul li:first-child a span{
+    font-size: 14px;
+    color: #999;
+}
+
+/* ------------------------------------------客房服务 */
+
+/* ------------------------------------------关于我们 */
+
+.xtx-contact ul li:nth-child(2){
+    margin: 80px 100px 80px 0px;
+    width: 193px;
+    height: 143px;
+}
+
+.xtx-contact ul li:nth-child(2) h3{
+    height: 50px;
+    color: #999;
+}
+
+.xtx-contact ul li:nth-child(2) a{
+    float: left;
+    margin-right: 3px;
+    width: 92px;
+    height: 92px;
+    border: solid 1px #eee;
+    /* ps */
+    /* background-color: pink; */
+}
+
+.xtx-contact ul li:nth-child(2) a:last-child{
+    margin-right: 0px;
+}
+
+.xtx-contact ul li:nth-child(2) a p{
+    margin: 22px 32px 10px 32px;
+    width: 36px;
+    height: 29px;
+    /* background-color: skyblue; */
+    background: url('../images/sprites.png') -205px -15px;    
+}
+
+.xtx-contact ul li:nth-child(2) a:last-child p{
+    background: url('../images/sprites.png') -350px -15px;    
+}
+
+.xtx-contact ul li:nth-child(2) a span{
+    font-size: 14px;
+    color: #999;
+}
+/* ------------------------------------------关于我们 */
+
+
+/* ------------------------------------------下载APP */
+.xtx-contact ul li:nth-child(3) {
+    float: left;
+    width: 250px;
+    height: 156px;
+    margin: 80px 74px 66px 0px;
+    padding-right: 33px;
+    border-right: solid 1px #eee;
+    font-size: 14px;
+}
+
+.xtx-contact ul li:nth-child(3) h3{
+    height: 40px;
+    color: #999;
+}
+
+.xtx-contact ul li:nth-child(3) img{
+    /* display: block; */
+    float: left;
+    width: 105px;
+    height: 105px;
+    padding: 7px;
+    border: solid 1px #f4f4f4;
+}
+
+.xtx-contact ul li:nth-child(3)  span{
+    float: left;
+    display: block;
+    /* width: 84px; */
+    height: 14px;
+    margin-top: 13px;
+    margin-left: 22px;
+    font-size: 14px;
+    font-weight: 900;
+    color: #999;
+}
+
+.xtx-contact ul li:nth-child(3) span:nth-child(2) {
+    float: left;
+    display: block;
+    margin-top: 0px;
+}
+
+.xtx-contact ul li:nth-child(3) a{
+    float: left;
+    display: block;
+    margin-left: 22px;
+    width: 103px;
+    height: 32px;
+    margin-top: 18px;
+    line-height: 32px;
+    background-color: #27ba9b;
+    font-size: 14px;
+    font-weight: 900;
+    color: #fff;
+}
+
+/* ------------------------------------------下载APP */
+
+/* ------------------------------------------服务热线 */
+.xtx-contact ul li:nth-child(4) {
+    float: left;
+    width: 180px;
+    height: 122px;
+    margin: 80px 0px 100px 0px;
+    font-size: 22px;
+}
+
+.xtx-contact ul li:nth-child(4) h3{
+    height: 58px;
+    font-size: 16px;
+    color: #999;
+}
+
+.xtx-contact ul li:nth-child(4) span{
+    font-size: 22px;
+    color: #666;
+}
+
+.xtx-contact ul li:nth-child(4) p{
+    margin-top: 14px;
+    font-size: 15px;
+    color: #999;
+}
+
+
+/* ------------------------------------------服务热线 */
+
+
+/* -------------------------------------------------------联系方式 */
+
+
+/* ------------------------------------------宣传服务 */
+.xtx-service{
+    height: 170px;
+    background-color: #333;
+}
+
+.xtx-service .container{
+    width: 1393px;
+    height: 169px;
+    border-bottom: 1px solid #434343;
+}
+
+.xtx-service .container a{
+    float: left;
+    width: 33.33%;
+    height: 169px;
+    line-height: 169px;
+    text-align: center;
+    color: #fff;
+    /* ps */
+    /* background-color: pink; */
+}
+
+.xtx-service .container a::before{
+    content: '';
+    display: inline-block;
+    margin-right: 19px;
+    width: 58px;
+    height: 58px;
+    vertical-align: middle;
+    /* ps */
+    /* background-color: red; */
+}
+
+.xtx-service .container a:nth-child(1):before{
+    background: url('../images/sprites.png') 0 0;
+}
+
+.xtx-service .container a:nth-child(2):before{
+    background: url('../images/sprites.png') -130px 0;
+}
+
+.xtx-service .container a:nth-child(3):before{
+    background: url('../images/sprites.png') -65px 0;
+}
+
+/* ------------------------------------------宣传服务 */
+
+/* ------------------------------------------版权信息 */
+
+.xtx-copyright{
+    height: 170px;
+    background-color: #333;
+}
+
+.xtx-copyright .container{
+    height: 170px;
+    padding-top: 41px;
+    box-sizing: border-box;
+    /* background-color: pink; */
+    text-align: center;
+    color: #999;
+}
+
+.xtx-copyright .container a{
+    color: #999;
+}
+
+.xtx-copyright .container p:nth-child(1){
+    height: 35px;
+}
+
+/* ------------------------------------------版权信息 */
+/* ----------------------------------底部模块 */
